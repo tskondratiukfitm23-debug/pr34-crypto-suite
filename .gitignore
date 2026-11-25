@@ -1,0 +1,12 @@
+keystore.json
+keys/*.pem
+logs/*
+!logs/.gitkeep
+outputs/*.bin
+outputs/*.part
+__pycache__/
+*.pyc
+.env
+*.part
+.pytest_cache/
+.abacus.donotdelete
