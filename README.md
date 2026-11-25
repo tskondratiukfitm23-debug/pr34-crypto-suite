@@ -145,3 +145,21 @@ python cli.py --interactive
 * Вихідні файли пишуться атомарно (`*.part` → `os.replace`); при збої перевірки результат не створюється.
 * RSA-OAEP шифрує лише короткі дані (≤ 190 Б для 2048) — для файлів використовуйте `hybrid`.
 * Обмеження: файл повністю завантажується в пам'ять (потокова обробка не реалізована); захист від side-channel — на рівні OpenSSL.
+
+## Скріншоти демонстрації
+
+| # | Що показано | Файл |
+|---|---|---|
+| 1 | AES-GCM та AES-CBC+HMAC: шифрування/розшифрування файлу | [01](docs/screenshots/01_sym_gcm_cbc.png) |
+| 2 | Автоматична (max_uses) та ручна ротація ключа | [02](docs/screenshots/02_sym_rotation.png) |
+| 3 | RSA-3072: генерація, OAEP, підпис PSS | [03](docs/screenshots/03_rsa.png) |
+| 4 | ECC P-384: ECIES, ECDSA, відмова на підробленому файлі | [04](docs/screenshots/04_ecc.png) |
+| 5 | Гібридне шифрування CHYB v1 (RSA і ECC) | [05](docs/screenshots/05_hybrid.png) |
+| 6 | Обробка винятків (коди 10/20/22/30/32) | [06](docs/screenshots/06_errors.png) |
+| 7 | pytest: 60 passed | [07](docs/screenshots/07_pytest.png) |
+| 8 | Бенчмарк | [08](docs/screenshots/08_bench.png) |
+| 9 | JSON-журнал без секретів | [09](docs/screenshots/09_logs.png) |
+| 10 | Інтерактивне меню | [10](docs/screenshots/10_interactive.png) |
+| 11 | keystore.json (ключі лише обгорнуті) | [11](docs/screenshots/11_keystore.png) |
+| 12 | Репозиторій на GitHub | [12](docs/screenshots/12_github_repo.png) |
+| 13 | GitHub Actions CI | [13](docs/screenshots/13_github_actions.png) |
